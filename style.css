@@ -1,20 +1,41 @@
 .noPadding{
-    padding-left:0;
+  padding: 0;
+}
+body{
+    background-color:blue;
+}
+.container{
+    background: white;
 }
 
 .single-item{
     
-    height:300px;
+    height:350px;
+    /* box-shadow: 0 0 4px gray */
+    
 }
 .top{
     background-color: maroon;
     height:200px;
 }
 .bottom{
-    background-color: blue;
-    height:100px;
+    background-color:lightblue;
+    height:120px;
 }
 .item-title{
+    color:maroon;
+    margin-top:0;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+.cutted-price{
+    margin-right: 10px;
     color:white;
-    margin:0;
+    font-size: 20px;
+}
+
+.discounted-price{
+    margin-right: 10px;
+    color:maroon;
+    font-size: 20px;
 }
