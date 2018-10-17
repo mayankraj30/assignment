@@ -1,0 +1,19 @@
+.noPadding{
+    padding-left:0;
+}
+
+.single-item{
+    
+    height:300px;
+}
+.top{
+    background-color: maroon;
+    height:200px;
+}
+.bottom{
+    background-color: blue;
+    height:100px;
+}
+.item-title{
+    color:white;
+}
