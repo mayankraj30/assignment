@@ -1,0 +1,125 @@
+[
+    {
+        "id": 1,
+        "name": "Dell Inspiron 15",
+        "category": "laptops",
+        "maincategory": "Electronics",
+        "company": "DELL",
+        "RAM": 4,
+        "image": "images/laptops/laptop1.jpg",
+        "processor": "i3",
+        "price": 30490,
+        "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+},
+
+{
+    "id": 1,
+    "name": "Dell Inspiron 15",
+    "category": "laptops",
+    "maincategory": "Electronics",
+    "company": "DELL",
+    "RAM": 4,
+    "image": "images/laptops/laptop1.jpg",
+    "processor": "i3",
+    "price": 30490,
+    "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+},
+
+{
+    "id": 1,
+    "name": "Dell Inspiron 15",
+    "category": "laptops",
+    "maincategory": "Electronics",
+    "company": "DELL",
+    "RAM": 4,
+    "image": "images/laptops/laptop1.jpg",
+    "processor": "i3",
+    "price": 30490,
+    "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+},
+{
+    "id": 1,
+    "name": "Dell Inspiron 15",
+    "category": "laptops",
+    "maincategory": "Electronics",
+    "company": "DELL",
+    "RAM": 4,
+    "image": "images/laptops/laptop1.jpg",
+    "processor": "i3",
+    "price": 30490,
+    "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+},
+{
+    "id": 1,
+    "name": "Dell Inspiron 15",
+    "category": "laptops",
+    "maincategory": "Electronics",
+    "company": "DELL",
+    "RAM": 4,
+    "image": "images/laptops/laptop1.jpg",
+    "processor": "i3",
+    "price": 30490,
+    "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+},
+
+    {
+        "id": 2,
+        "name": "Dell Inspiron 15",
+        "category": "mobiles",
+        "maincategory": "Electronics",
+        "company": "DELL",
+        "RAM": 4,
+        "image": "images/mobiles/Mobile1.jpg",
+        "processor": "i3",
+        "price": 30490,
+        "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+},
+{
+    "id": 2,
+    "name": "Dell Inspiron 15",
+    "category": "mobiles",
+    "maincategory": "Electronics",
+    "company": "DELL",
+    "RAM": 4,
+    "image": "images/mobiles/Mobile1.jpg",
+    "processor": "i3",
+    "price": 30490,
+    "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+},
+{
+    "id": 2,
+    "name": "Dell Inspiron 15",
+    "category": "mobiles",
+    "maincategory": "Electronics",
+    "company": "DELL",
+    "RAM": 4,
+    "image": "images/mobiles/Mobile1.jpg",
+    "processor": "i3",
+    "price": 30490,
+    "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+},
+{
+    "id": 2,
+    "name": "Dell Inspiron 15",
+    "category": "mobiles",
+    "maincategory": "Electronics",
+    "company": "DELL",
+    "RAM": 4,
+    "image": "images/mobiles/Mobile1.jpg",
+    "processor": "i3",
+    "price": 30490,
+    "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+},
+{
+    "id": 2,
+    "name": "Dell Inspiron 15",
+    "category": "mobiles",
+    "maincategory": "Electronics",
+    "company": "DELL",
+    "RAM": 4,
+    "image": "images/mobiles/Mobile1.jpg",
+    "processor": "i3",
+    "price": 30490,
+    "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+}
+]
