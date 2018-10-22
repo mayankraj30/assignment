@@ -1,0 +1,62 @@
+{
+    "category":[
+        {
+            "name":"fashion",
+            "subcategory":[
+                {
+                    "name":"Men"
+                },
+                {
+                    "name":"Women"
+                }
+            ]
+        },
+        {
+            "name":"Electronics",
+            "subcategory":[
+                {
+                    "name":"mobiles"
+                },
+                {
+                    "name":"laptops"
+
+                },
+                {
+                    "name":"television"
+                },
+                {
+                    "name":"tablets"
+                }
+            ]
+        },
+        {
+            "name":"home and furniture",
+            "subcategory":[
+                {
+                    "name":"inspiring homes"
+                },
+                {
+                    "name":"Home furnishing"
+                },
+                {
+                    "name":"Home Decor"
+                }
+            ]
+
+        },
+        {
+            "name":"TVs & appliances",
+            "subcategory":[
+                {
+                    "name":"Televisions"
+                },
+                {
+                    "name":"washing machines"
+                },
+                {
+                    "name":"Kitchem appliances"
+                }
+            ]
+        }
+    ]
+}
