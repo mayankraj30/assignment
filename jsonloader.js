@@ -4,7 +4,7 @@ $(document).ready(function(){
         $.each(data.categories,function(index,category){
             var subCategoryData="";
             $.each(category.subcategory,function(index,subcategory){
-                subCategoryData+="<li onClick=\"openProductPage('"+subcategory.name+"')\"><a href=\"#\">"+ subcategory.name+"</a></li>";
+                subCategoryData+="<li><a href=\"#\">"+ subcategory.name+"</a></li>";
                 console.log(subcategory.name);
             });
         
