@@ -40,6 +40,7 @@ function openProductPage(subcategoryName)
                 <div class="column">
                   <img src="${d.image}" alt="sorry" style="width:100%">
                 </div>
+                <div class="btn btn-primary">add to cart</div>
               </div>`)
             }
         }
