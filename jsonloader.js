@@ -1,3 +1,8 @@
+var cartProductItems=[];//array to store products in cart 
+
+
+
+
 $(document).ready(function () {
 
     $.getJSON("category.json", function (data) {
@@ -35,7 +40,13 @@ function openProductPage(subcategoryName) {
             
                 <div class="column">
                   <img src="${d.image}" alt="sorry" style="width:100%">
-                  <div class="btn btn-primary">add to cart</div>
+                  <p>${d.name}</p>
+                  <span>Price ${d.price}<span>
+                  <div class="btn btn-primary">add to wish list</div>
+                  
+                  <div>     <button type="button" class="btn btn-primary btn-sm" onClick="addToCart(${d.id})">
+                  <span class="glyphicon glyphicon-shopping-cart" ></span> Add to Cart
+                </button></div>
                 </div>
                 
               </div>`)
@@ -43,6 +54,72 @@ function openProductPage(subcategoryName) {
         }
 
     });
+}
+
+
+
+
+
+
+function addToCart(prodId){
+    $.getJSON("products.json",function(data){
+        for(d of data)
+        {
+            if(d.id==prodId)
+            {
+                console.log("inside if of product page");
+                cartProductItems.push(d);
+                console.log("number of products"+cartProductItems.length);
+                alert("product  is added to cart");
+                break;
+                
+
+            }
+        }
+    });
+
+
+}
+function openCartPart(){
+    document.getElementById("productDisplay").innerHTML="";
+
+    if(cartProductItems.length==0)
+    {
+        $("#productDisplay").append(`
+        <div class="jumbotron">
+            <div class="conatiner text-center">
+                <h2>Cart is empty</h2>
+                <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-home" ></span>Back to home</a>
+            
+            </div>
+        
+        
+        </div>
+        
+        `);
+    }
+    else{
+        for(d of cartProductItems)
+        {
+            console.log(d);
+
+            $("#productDisplay").append(`<div class="col-md-4 col-sm-6 col-xs-12">
+            
+            <div class="column">
+              <img src="${d.image}" alt="sorry" style="width:100%">
+              <p>${d.name}</p>
+              <span>Price ${d.price}<span>
+              
+              
+              <div>     <button type="button" class="btn btn-primary btn-sm" onClick="removeCartItem(${d.id})"> Remove from cart
+            </button></div>
+            </div>
+            
+          </div>`)
+        }
+    }
+
+
 }
 
 
