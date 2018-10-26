@@ -39,7 +39,7 @@ function openProductPage(subcategoryName) {
                 $("#productDisplay").append(`<div class="col-md-4 col-sm-6 col-xs-12">
             
                 <div class="column">
-                  <img src="${d.image}" alt="sorry" style="width:100%">
+                  <img src="${d.image}" onclick="openProductDescription()" alt="sorry" style="width:100%">
                   <p>${d.name}</p>
                   <span>Price ${d.price}<span>
                   <div class="btn btn-primary">add to wish list</div>
@@ -139,6 +139,11 @@ function removeCartItem(prodId)
 
 }
 
+
+function openProductDescription(){
+    document.getElementById("productDisplay").innerHTML="";
+    $.getJSON()
+}
 
 
 
