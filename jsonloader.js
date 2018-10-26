@@ -126,7 +126,7 @@ function removeCartItem(prodId)
 {
     for(index in cartProductItems)
     {
-        console.log("removed from cart");
+        
         if(cartProductItems[index].id==prodId)
         {
             cartProductItems.splice(index,1)
