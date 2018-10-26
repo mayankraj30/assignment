@@ -80,7 +80,7 @@ function addToCart(prodId){
 
 
 }
-function openCartPart(){
+function openCartPage(){
     document.getElementById("productDisplay").innerHTML="";
 
     if(cartProductItems.length==0)
@@ -119,6 +119,23 @@ function openCartPart(){
         }
     }
 
+
+}
+
+function removeCartItem(prodId)
+{
+    for(index in cartProductItems)
+    {
+        console.log("removed from cart");
+        if(cartProductItems[index].id==prodId)
+        {
+            cartProductItems.splice(index,1)
+            openCartPage()
+            alert("product removed from cart");
+            break;
+
+        }
+    }
 
 }
 
