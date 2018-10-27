@@ -1,5 +1,5 @@
 var cartProductItems=[];//array to store products in cart 
-
+var wishListProductItems=[];//array to store products in cart
 
 
 
@@ -38,16 +38,15 @@ function openProductPage(subcategoryName) {
             if (d.category == subcategoryName) {
                 $("#productDisplay").append(`<div class="col-md-4 col-sm-6 col-xs-12">
             
-                <div class="column">
-                  <img src="${d.image}" onclick="openProductDescription()" alt="sorry" style="width:100%">
-                  <p>${d.name}</p>
-                  <span>Price ${d.price}<span>
-                  <div class="btn btn-primary">add to wish list</div>
-                  
-                  <div>     <button type="button" class="btn btn-primary btn-sm" onClick="addToCart(${d.id})">
-                  <span class="glyphicon glyphicon-shopping-cart" ></span> Add to Cart
-                </button></div>
-                </div>
+                <div class="card">
+                <a href="#">
+  <img src="${d.image}" onclick="openProductDescription(${d.id})" alt="sorry" style="width:100%"></a>
+  <h1>${d.name}</h1>
+  <p class="price">Price Rs ${d.price}</p>
+
+  <p><button onclick="addToCart(${d.id})">Add to cart<span class="glyphicon glyphicon-shopping-cart"><span></button></p>
+  <p><button id="wishlist" onclick="addToWishList(${d.id})">Add to wishlist<span class="glyphicon glyphicon-heart"></span></button></p>
+</div>
                 
               </div>`)
             }
@@ -105,15 +104,13 @@ function openCartPage(){
 
             $("#productDisplay").append(`<div class="col-md-4 col-sm-6 col-xs-12">
             
-            <div class="column">
-              <img src="${d.image}" alt="sorry" style="width:100%">
-              <p>${d.name}</p>
-              <span>Price ${d.price}<span>
-              
-              
-              <div>     <button type="button" class="btn btn-primary btn-sm" onClick="removeCartItem(${d.id})"> Remove from cart
-            </button></div>
-            </div>
+            <div class="card">
+  <img src="${d.image}" alt="sorry" style="width:100%">
+  <h1>${d.name}</h1>
+  <p class="price">Price Rs ${d.price}</p>
+  <p class="description">${d.description}</p>
+  <p><button onclick="removeCartItem(${d.id})">remove from cart</button></p>
+</div>
             
           </div>`)
         }
@@ -140,11 +137,115 @@ function removeCartItem(prodId)
 }
 
 
-function openProductDescription(){
+function openProductDescription(prodId){
     document.getElementById("productDisplay").innerHTML="";
-    $.getJSON()
+    $.getJSON("products.json",function(data){
+        for(d of data)
+        {
+            if(d.id==prodId)
+            {
+
+                console.log("innside if of open product descripion page");
+                $("#productDisplay").append(`
+                <div class="card">
+                    <img src="${d.image}" alt="Denim Jeans" style="width:100%">
+                     <h1>${d.name}</h1>
+                        <p class="price">Price Rs=${d.price}</p>
+                        <p class="description">${d.description}</p>
+                         <p><button onclick="addToCart(${d.id})">Add to Cart</button></p>
+                         <p><button onclick="addToWishList(${d.id})">Add to List</button></p>
+                </div>
+
+                
+                
+                
+                `);
+                break;
+            }
+        }
+
+    });
 }
 
+
+function addToWishList(prodId)
+{
+    
+    $.getJSON("products.json",function(data){
+        for(d of data)
+        {
+            if(d.id==prodId)
+            {
+                wishListProductItems.push(d);
+                alert("product added to wish list");
+                console.log(d);
+                console.log(wishListProductItems.length);
+                break;
+            }
+        }
+
+    });
+
+
+}
+
+
+
+function openWishListPage()
+{
+    document.getElementById("productDisplay").innerHTML="";
+    if(wishListProductItems.length==0)
+    {
+        $("#productDisplay").append(`
+        <div class="jumbotron">
+            <div class="conatiner text-center">
+                <h2>Wishlist is empty</h2>
+                <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-home" ></span>Back to home</a>
+            
+            </div>
+        
+        
+        </div>
+        
+        `);
+    }
+    else{
+        for(d of wishListProductItems)
+        {
+            console.log(d);
+
+            $("#productDisplay").append(`<div class="col-md-4 col-sm-6 col-xs-12">
+            
+            <div class="card">
+  <img src="${d.image}" alt="sorry" style="width:100%">
+  <h1>${d.name}</h1>
+  <p class="price">Price Rs ${d.price}</p>
+  <p class="description">${d.description}</p>
+  <p><button onclick="removeFromWishlist(${d.id})">remove from Wishlistt</button></p>
+</div>
+            
+          </div>`)
+        }
+    }
+
+
+productDisplay
+}
+
+function removeFromWishlist(prodId){
+    for(index in wishListProductItems)
+    {
+        if(wishListProductItems[index].id==prodId)
+        {
+            wishListProductItems.splice(index,1);
+            alert("product removed from wishlist");
+            openWishListPage();
+            break;
+
+
+        }
+    }
+}
 
 
 
