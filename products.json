@@ -121,5 +121,85 @@
     "processor": "i3",
     "price": 30490,
     "description": "1 TB HDD, Windows 10 Home, Core i3, 6th Gen"
+},
+{
+    "id": 2,
+    "name": "Mens Tshirt",
+    "category": "Men",
+    "maincategory": "fashion",
+    "company": "addidas",
+    
+    "image": "images/men/men7.jpeg",
+    "price": 3000,
+    "description": " 100% Cotton (Bio-Washed and Pre-Shrunk)  "
+},
+{
+    "id": 2,
+    "name": "Mens Tshirt",
+    "category": "Men",
+    "maincategory": "fashion",
+    "company": "addidas",
+    
+    "image": "images/men/men1.jpeg",
+    "price": 3000,
+    "description": " 100% Cotton (Bio-Washed and Pre-Shrunk)  "
+},
+{
+    "id": 2,
+    "name": "Mens Tshirt",
+    "category": "Men",
+    "maincategory": "fashion",
+    "company": "addidas",
+    
+    "image": "images/men/men1.jpeg",
+    "price": 3000,
+    "description": " 100% Cotton (Bio-Washed and Pre-Shrunk)  "
+},
+{
+    "id": 2,
+    "name": "Mens Tshirt",
+    "category": "Men",
+    "maincategory": "fashion",
+    "company": "addidas",
+    
+    "image": "images/men/men1.jpeg",
+    "price": 3000,
+    "description": " 100% Cotton (Bio-Washed and Pre-Shrunk)  "
+},
+{
+    "id": 2,
+    "name": "Mens Tshirt",
+    "category": "Men",
+    "maincategory": "fashion",
+    "company": "addidas",
+    
+    "image": "images/men/men1.jpeg",
+    "price": 3000,
+    "description": " 100% Cotton (Bio-Washed and Pre-Shrunk)  "
+},
+{
+    "id": 2,
+    "name": "Mens Tshirt",
+    "category": "Men",
+    "maincategory": "fashion",
+    "company": "addidas",
+    
+    "image": "images/men/men1.jpeg",
+    "price": 3000,
+    "description": " 100% Cotton (Bio-Washed and Pre-Shrunk)  "
+},
+{
+    "id": 2,
+    "name": "Mens Tshirt",
+    "category": "Men",
+    "maincategory": "fashion",
+    "company": "addidas",
+    
+    "image": "images/men/men7.jpeg",
+    "price": 3000,
+    "description": " 100% Cotton (Bio-Washed and Pre-Shrunk)  "
 }
+
+
+
 ]

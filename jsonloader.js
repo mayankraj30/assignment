@@ -7,7 +7,7 @@ function home()
     document.getElementById("productDisplay").innerHTML="";
     $("#productDisplay").append(`
     <div class="container">
-  <h2>Carousel Example</h2>  
+   
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -41,6 +41,8 @@ function home()
       <span class="sr-only">Next</span>
     </a>
   </div>
+  <div class="col-md-4 col-sm-6 col-xs-12">
+            
 </div>
 
     
