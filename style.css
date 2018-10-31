@@ -108,4 +108,12 @@ body{
     font-size: 18px;
 
   }
+
+  .homeCarousel{
+      height:300px;
+  }
+  #productDisplay
+  {
+      height:300px;
+  }
   

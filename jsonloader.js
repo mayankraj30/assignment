@@ -1,12 +1,13 @@
 var cartProductItems=[];//array to store products in cart 
 var wishListProductItems=[];//array to store products in cart
+var company=new Set();
 
 
 function home()
 {
     document.getElementById("productDisplay").innerHTML="";
     $("#productDisplay").append(`
-    <div class="container">
+    <div class="container ">
    
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -80,11 +81,28 @@ function openProductPage(subcategoryName) {
     document.getElementById("productDisplay").innerHTML = "";
 
     $.getJSON("products.json", function (data) {
+        for(d of data)
+        {
+            if(d.category==subcategoryName)
+            {
+                company.add(d.company);
+            }
+        }
+        for(d of company){
+            $("#productDisplay").append(`
+                <div class="filter" style="float:left;postion:relative"><label><input type="checkbox"  onclick="checkbox_click(this,'${subcategoryName}')" value="${d}">${d}</label></div>
+                
+                `)
+        }
+
+
+
+        
         for (d of data) {
             console.log(d.category, subcategoryName);
             if (d.category == subcategoryName) {
                 $("#productDisplay").append(`<div class="col-md-4 col-sm-6 col-xs-12">
-            
+                            
                 <div class="card">
                 <a href="#">
   <img src="${d.image}" onclick="openProductDescription(${d.id})" alt="sorry" style="width:100%"></a>
@@ -192,7 +210,7 @@ function openProductDescription(prodId){
             if(d.id==prodId)
             {
 
-                console.log("innside if of open product descripion page");
+                console.log("innside if of open product descripion page",d.name);
                 $("#productDisplay").append(`
                 <div class="card">
                     <img src="${d.image}" alt="Denim Jeans" style="width:100%">
