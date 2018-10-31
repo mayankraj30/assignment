@@ -125,6 +125,8 @@ function openProductPage(subcategoryName) {
 
 
 
+
+
 function addToCart(prodId){
     $.getJSON("products.json",function(data){
         for(d of data)
